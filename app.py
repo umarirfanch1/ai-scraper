@@ -2,10 +2,9 @@ import streamlit as st
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-from openai import OpenAI
+from openai import OpenAI, RateLimitError  # fixed import
 import json
 import time
-from openai.error import RateLimitError
 
 st.set_page_config(page_title="AI Web Scraper", layout="wide")
 st.title("AI Web Scraper Agent")
